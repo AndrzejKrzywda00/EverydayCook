@@ -1,0 +1,32 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    tools:context=".TagCreation.TagCreationActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="414dp"
+        android:layout_height="65dp"
+        android:background="@color/black">
+
+        <!--Main text displayed on the toolbar-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tag_text"
+            android:textColor="@color/white"
+            android:textSize="23sp">
+        </TextView>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:name="com.example.everydaycook.TagCreation.TagCreationFragment"
+        android:id="@+id/tag_creation_fragment"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="75dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

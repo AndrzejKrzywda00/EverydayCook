@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/row_background"
+        android:layout_margin="15dp"
+        android:padding="15dp">
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/algorithm_settings"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center">
+
+            </TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="left"
+                android:id="@+id/alg_switch1"
+                android:text="@string/default_algorithm"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:switchPadding="40dp">
+
+            </androidx.appcompat.widget.SwitchCompat>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/alg_switch2"
+                android:layout_gravity="left"
+                android:text="@string/advanced_algorithm_history"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:switchPadding="10dp">
+
+            </androidx.appcompat.widget.SwitchCompat>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="left"
+                android:id="@+id/alg_switch3"
+                android:text="@string/no_meat_friday"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:switchPadding="55dp">
+
+            </androidx.appcompat.widget.SwitchCompat>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="left"
+                android:id="@+id/alg_switch4"
+                android:text="@string/make_recent_better"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:switchPadding="20dp">
+
+            </androidx.appcompat.widget.SwitchCompat>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="15dp">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="left"
+                android:id="@+id/alg_switch5"
+                android:text="@string/make_rare_better"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:switchPadding="34dp">
+
+            </androidx.appcompat.widget.SwitchCompat>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/save_agl_button"
+                android:text="@string/save_algorithm_settings"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/black">
+
+            </Button>
+
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".DishList.DishListActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="414dp"
+        android:layout_height="65dp"
+        android:background="@color/black">
+
+        <!--Main text displayed on the toolbar-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dish_list_toolbar_text"
+            android:textColor="@color/white"
+            android:textSize="23sp">
+        </TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <include
+        layout="@layout/fragment_dish_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="75dp">
+    </include>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

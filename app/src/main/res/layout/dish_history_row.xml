@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="start"
+    android:background="@drawable/history_background"
+    android:layout_margin="15dp"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/number"
+        android:id="@+id/dish_history_number"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+
+    </TextView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:id="@+id/dish_history_image"
+        android:src="@drawable/logo50"
+        android:contentDescription="@string/default_description">
+
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/default_description"
+            android:textColor="@color/black"
+            android:id="@+id/dish_history_name"
+            android:textSize="20sp">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/default_description"
+            android:textColor="@color/black"
+            android:id="@+id/dish_history_date">
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

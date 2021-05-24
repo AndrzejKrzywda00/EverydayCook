@@ -1,0 +1,139 @@
+<resources>
+    <!--App name-->
+    <string name="app_name">EverydayCook</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <!--Basic activities names-->
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_entry">EntryActivity</string>
+    <string name="title_activity_start">StartActivity</string>
+
+    <!--Starting activity strings-->
+    <string name="add_new_dish">Nowe danie</string>
+    <string name="show_active_dish">Zobacz dzisiejsze danie</string>
+    <string name="welocme_app_text">Witaj w aplikacji!</string>
+    <string name="display_app_name">Everyday Cook</string>
+    <string name="swiping_left_text">Przesuń w lewo aby wejść do głównego menu</string>
+    <string name="swiping_right_text">Przesuń w prawo aby zobaczyć dania</string>
+
+    <!--Default description-->
+    <string name="default_description">Default description</string>
+
+    <!--Main menu strings-->
+    <string name="toolbar_text">Menu główne</string>
+
+    <!--Main menu titles in order-->
+    <string name="create_dish">Dodaj danie</string>
+    <string name="propose_dish">Danie na dziś</string>
+    <string name="dishes_list">Moje dania</string>
+    <string name="dishes_history">Historia posiłków</string>
+    <string name="settings_app">Ustawienia</string>
+    <string name="stats_app">Statystyki</string>
+    <string name="tags_creator">Dodaj tagi</string>
+    <string name="information_app">Informacje</string>
+
+    <!--Main menu subtitles-->
+    <string name="create_dish_subtitle">Dodaj nowe danie w kreatorze</string>
+    <string name="propose_dish_subtitle">Sprawdź co dziś możesz ugotować, dodaj zaawansowane filtry</string>
+    <string name="dishes_list_subtitle">Przeglądaj swoją bazę zapisanych dań</string>
+    <string name="dishes_history_subtitle">Zobacz swoją historię posiłków z ostatnich dni</string>
+    <string name="settings_app_subtitle">Modyfikuj preferencje dla aplikacji</string>
+    <string name="stats_app_subtitle">Zobacz swoje statystyki</string>
+    <string name="information_app_subtitle">Wejdź na stronę aplikacji i dowiedz się więcej</string>
+    <string name="tag_information">Edytuj tagi i personalizuj wyszukiwania</string>
+
+    <!--Creator of the dishes-->
+    <string name="create_dish_toolbar">Nowe danie</string>
+
+    <!--Basic data fragment-->
+    <string name="dish_name">Nazwa dania</string>
+    <string name="dish_desc">Krótki opis</string>
+    <string name="dish_photo">Zdjęcie</string>
+    <string name="name_hint">np. Spaghetti bolognese</string>
+    <string name="desc_hint">np. Szybkie tanie danie</string>
+    <string name="photo_hint">Dodaj zdjęcie</string>
+
+    <!--Advanced data fragment-->
+    <string name="dish_ingredients">Składniki</string>
+    <string name="dish_recipe">Przepis</string>
+    <string name="add_ingredient">Dodaj składnik</string>
+
+    <!--Supplementary information fragment-->
+    <string name="cooking_time">Czas gotowania</string>
+    <string name="kilocalories">Kilokalorie</string>
+    <string name="tags">Dostępne tagi</string>
+    <string name="diet_type">Dieta</string>
+    <string name="vegan_diet">Wegańska</string>
+    <string name="vegetarian_diet">Wegetariańska</string>
+
+    <!--Finishing creation process-->
+    <string name="end_adding_phase">Zakończ</string>
+
+    <!--Useful thing-->
+    <string name="not_implemented">Not implemented</string>
+
+    <!--Information activity-->
+    <string name="general_info">Ta aplikacja została wykonana przez Andrzeja Krzywdę jako część projektu na Języki Programowania Wysokiego Poziomu.</string>
+    <string name="studying_info">W ramach II roku studiów na AGH na kierunku Teleinformatyka.</string>
+    <string name="logo_info">Wszystkie grafiki i loga to praca własna.</string>
+    <string name="font_info">Czcionka użyta w nazwie aplikacji jest dostępna za darmo.</string>
+    <string name="page_info">Po więcej informacji oraz najnowsze wersje zajrzyj na stronę internetową:</string>
+    <string name="url_info">https://andrzejkrzywda.pl/apps/everyday_cook</string>
+    <string name="year_info">czerwiec 2021</string>
+    <string name="version">wersja - 1.0.0</string>
+    <string name="go_back">Powrót</string>
+
+    <!--Dish list activity-->
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="title_activity_dish_list">ScrollingActivity</string>
+    <string name="number">1.</string>
+    <string name="dish_list_toolbar_text">Moje dania</string>
+
+    <!--Tag creation activity-->
+    <string name="tag_name">Nazwa tagu</string>
+    <string name="tag_hint">np. Sałatka</string>
+    <string name="tag_color">Kolor tagu</string>
+    <string name="tag_text">Kreator tagów</string>
+    <string name="add_tag">Dodaj tag</string>
+    <string name="choose_tag_color">wybierz kolor</string>
+    <string name="tag_success">Dodałeś nowy tag!</string>
+    <string name="tag_problem">Nie udało się dodać tagu</string>
+
+    <!--Settings activity-->
+    <string name="remove_tags">Usuń wszystkie tagi</string>
+    <string name="remove_history">Usuń historię</string>
+    <string name="remove_dishes">Usuń posiłki</string>
+    <string name="removing_warning">Ostrożnie! Poniższe przyciski nieodwracalnie zlikwidują Twoje dane.</string>
+
+    <string name="algorithm_settings">Ustawienia dla algorytmu dobotu dań</string>
+    <string name="default_algorithm">Domyślny algorytm selekcji dań</string>
+    <string name="advanced_algorithm_history">Dopasuj danie na podstawie historii</string>
+    <string name="no_meat_friday">Nie wyświetlaj mięsa w piątki</string>
+    <string name="make_recent_better">Faworyzuj dania dodane niedawno</string>
+    <string name="make_rare_better">Faforyzuj dania które jem rzadko</string>
+    <string name="save_algorithm_settings">Zapisz tryb wyboru</string>
+    <string name="other_settings">Pozostałe ustawienia</string>
+    <string name="max_history_size">Automatyczne czyszczenie historii</string>
+    <string name="take_tags_hard">Wybieraj tylko po tagach</string>
+
+    <!--Statistics-->
+    <string name="my_stats">Moje statystyki</string>
+
+    <!--Dish chooser-->
+    <string name="choose_dish">Wybór dania</string>
+
+    <!--Dish display-->
+    <string name="no_dishes_title">Nie można wyświetlić dań</string>
+    <string name="no_dishes_subtitle">Dodaj więcej dań w kreatorze aby algorytm doboru mógł poprawnie zadziałać</string>
+    <string name="no_dishes_sign">:(</string>
+    <string name="no_dishes_info">Coś poszło nie tak</string>
+    <string name="swipe_left">Przesuń w lewo aby powrócić</string>
+
+</resources>

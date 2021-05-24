@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/row_background"
+        android:layout_margin="15dp"
+        android:padding="15dp">
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/removing_warning"
+                android:textColor="@color/black"
+                android:maxWidth="300dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="20sp">
+
+            </TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center">
+            
+            <Button
+                android:layout_width="wrap_content"
+                android:id="@+id/remove_dishes"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/materialcolorpicker__red"
+                android:text="@string/remove_dishes">
+            </Button>
+            
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/remove_tags"
+                android:backgroundTint="@color/materialcolorpicker__red"
+                android:text="@string/remove_tags">
+            </Button>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/remove_history"
+                android:backgroundTint="@color/materialcolorpicker__red"
+                android:text="@string/remove_history">
+            </Button>
+
+        </TableRow>
+        
+    </TableLayout>
+    
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

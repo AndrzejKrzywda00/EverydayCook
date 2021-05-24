@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/row_background"
+    tools:context=".DishCreation.DishAdvancedDataFragment"
+    android:padding="15dp"
+    android:layout_margin="15dp">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dish_ingredients"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginStart="2dp">
+
+        </TextView>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        tools:ignore="UselessParent">
+
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/writing_background"
+            android:id="@+id/ingredients_text"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:labelFor="@+id/ingredients"
+            android:padding="5dp"
+            android:lines="8"
+            android:maxLines="20"
+            android:minLines="1"
+            android:scrollbars="vertical"
+            tools:ignore="LabelFor"
+            android:autofillHints="none" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dish_recipe"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginStart="2dp">
+
+        </TextView>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        tools:ignore="UselessParent">
+
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/writing_background"
+            android:id="@+id/recipe_text"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:labelFor="@+id/ingredients"
+            android:lines="8"
+            android:padding="5dp"
+            android:maxLines="20"
+            android:minLines="1"
+            android:scrollbars="vertical"
+            tools:ignore="LabelFor"
+            android:autofillHints="none" />
+
+    </TableRow>
+
+</TableLayout>

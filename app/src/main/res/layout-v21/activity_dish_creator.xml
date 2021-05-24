@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DishCreation.DishCreatorActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/new_dish_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_dish_toolbar"
+            android:textColor="@color/white"
+            android:textSize="20sp">
+
+        </TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--Scroll view for contents-->
+    <ScrollView
+        android:id="@+id/dish_creator_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/new_dish_toolbar">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="15dp">
+
+            <!--Here all elements will be packed-->
+            <androidx.fragment.app.FragmentContainerView
+                android:name="com.example.everydaycook.DishCreation.DishBasicDataFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/first_fragment"/>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:name="com.example.everydaycook.DishCreation.DishAdvancedDataFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/second_fragment"/>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:name="com.example.everydaycook.DishCreation.DishSupplementaryDataFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/third_fragment"/>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:name="com.example.everydaycook.DishCreation.DishTagsDataFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fourth_fragment"/>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:name="com.example.everydaycook.DishCreation.DishFinishingFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fifth_fragment"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
