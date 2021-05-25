@@ -136,4 +136,12 @@
     <string name="no_dishes_info">Coś poszło nie tak</string>
     <string name="swipe_left">Przesuń w lewo aby powrócić</string>
 
+    <!--Default values of dish display screen-->
+    <string name="default_dish_name">Spaghetti bolognese</string>
+    <string name="default_dish_description">Pyszne i szybkie danie z użyciem łatwo dostępnych składników</string>
+    <string name="recipe_holder">PRZEPIS</string>
+    <string name="ingredients_holder">SKŁADNIKI</string>
+    <string name="default_recipe">Zagotuj wodę na makaron. Dodaj makaron. Podgrzej oliwę na gazie, dodaj przyprawę z paczki oraz sos pomidorowy. Następnie odsącz makaron i dodaj sos. Posyp serem. Gotowe!</string>
+    <string name="default_ingredients">Makaron spaghetti, sos pomidorowy, ser typu parmezan, bazylia, przyprawy</string>
+    <string name="default_calories">400</string>
 </resources>

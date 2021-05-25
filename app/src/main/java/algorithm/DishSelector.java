@@ -3,7 +3,6 @@ package algorithm;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.Random;
@@ -39,6 +38,7 @@ public class DishSelector {
         if(algorithmPreference.equals("include_history")) {
             return proposeDishesWithHistory(c);
         }
+        return new ArrayList<>();
     }
 
     /*
@@ -62,6 +62,10 @@ public class DishSelector {
         return dishes;
     }
 
+    /*
+    take history into consideration
+    idk how to do it right now
+     */
     private ArrayList<Dish> proposeDishesWithHistory(Context c) {
         return new ArrayList<>();
     }
