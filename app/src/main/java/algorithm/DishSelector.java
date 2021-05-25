@@ -1,5 +1,7 @@
 package algorithm;
 
+import android.content.SharedPreferences;
+
 public class DishSelector {
 
     /*
@@ -8,8 +10,14 @@ public class DishSelector {
     and displaying it to application
      */
 
-    public DishSelector() {
+    private String algorithmPreference;
+    private String modePreference;
 
+    // first i need to take data set in constructor
+    // bc i can't call SharedPreferences because i don't have context
+    public DishSelector(SharedPreferences preferences) {
+        algorithmPreference = preferences.getString("algorithm","default");
+        modePreference = preferences.getString("mode","default");
     }
 
 }

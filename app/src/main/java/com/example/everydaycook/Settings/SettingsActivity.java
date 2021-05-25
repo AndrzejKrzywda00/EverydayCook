@@ -36,10 +36,27 @@ public class SettingsActivity extends AppCompatActivity {
         otherFragment = (OtherSettingsFragment) getSupportFragmentManager().findFragmentById(R.id.other_settings_fragment);
     }
 
+    /*
+    Preferences API:
+        + algorithm
+            - default
+            - include_history
+            - no_meat_fridays
+            - prefer_recent_dishes
+            - prefer_rare_dishes
+        + mode
+            - default
+            - only_tags
+            - auto_history_clean
+     This refers to two undermentioned methods
+     */
+
     protected void saveAlgorithmPreference(String preference) {
         savePreference("algorithm", preference);
     }
 
-
+    protected void saveModePreference(String preference) {
+        savePreference("mode", preference);
+    }
 
 }
