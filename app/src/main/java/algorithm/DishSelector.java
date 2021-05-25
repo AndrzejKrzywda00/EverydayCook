@@ -3,8 +3,11 @@ package algorithm;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.Random;
+import java.util.Set;
 
 import DBConnection.DatabaseHelper;
 import Exceptions.TooSmallDataSetException;
@@ -38,26 +41,41 @@ public class DishSelector {
         }
     }
 
+    /*
+    Makes random choice of dishes from database
+     */
     private ArrayList<Dish> proposeDishesDefault(Context c) throws TooSmallDataSetException {
+        ArrayList<Dish> dishes = new ArrayList<>();
         DatabaseHelper dbConnection = new DatabaseHelper(c);
         int dishesImported = dbConnection.getNumberOfDishes();
         if(dishesImported >= NUMBER_OF_DISHES) {
-
+            ArrayList<Integer> indexes = getRandomIntegers(dishesImported);
+            ArrayList<Integer> ids = dbConnection.getIdsAtIndexes(indexes);
+            for(Integer id : ids) {
+                Dish dish = dbConnection.getDishAtID(id);
+                dishes.add(dish);
+            }
         }
         else {
             throw new TooSmallDataSetException();
         }
+        return dishes;
     }
 
     private ArrayList<Dish> proposeDishesWithHistory(Context c) {
-
+        return new ArrayList<>();
     }
 
     // returns list of randomly chosen integers
     // between value 1 and q
     private ArrayList<Integer> getRandomIntegers(int q) {
         Random random = new Random();
-        
+        Set<Integer> set = new LinkedHashSet<>();
+        while(set.size() < NUMBER_OF_DISHES) {
+            int number = random.nextInt(q);
+            set.add(number);
+        }
+        return new ArrayList<>(set);
     }
 
 }
