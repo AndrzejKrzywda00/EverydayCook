@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import ModelObjects.Dish;
 import ModelObjects.HistoryRowDish;
@@ -254,7 +255,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Dish dish = new Dish();     // empty object
 
         if(c != null) {
-            c.moveToFirst();
             // setting all direct data
             dish.setName(c.getString(c.getColumnIndex(NAME)));
             dish.setDescription(c.getString(c.getColumnIndex(DESCRIPTION)));
@@ -270,6 +270,48 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             c.close();
         }
         return dish;
+    }
+
+    /*
+    This method imports number of dishes that are in a database
+     */
+    public int getNumberOfDishes() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String selectQuery = "SELECT COUNT(id) FROM " + TABLE_DISHES;
+
+        Cursor c = db.rawQuery(selectQuery, null);
+        int output = 0;
+        if(c != null) {
+            output = c.getInt(c.getColumnIndex(ID));
+            c.close();
+        }
+        return output;
+    }
+
+    /*
+    This function takes in array list of indexes
+    and returns array list of ids that are at
+    these indexes
+     */
+    public ArrayList<Integer> getIdsAtIndexes(ArrayList<Integer> indexes) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String selectQuery = "SELECT " + ID + " FROM " + TABLE_DISHES;
+
+        Cursor c = db.rawQuery(selectQuery, null);
+
+        int indexCounter = 1;
+        ArrayList<Integer> output = new ArrayList<>();
+
+        if(c.moveToFirst()) {
+            do {
+                if(indexes.contains(indexCounter)) {
+                    output.add(c.getInt(c.getColumnIndex(ID)));
+                }
+                indexCounter++;
+            } while(c.moveToNext());
+            c.close();
+        }
+        return output;
     }
 
     // id list should be in format
