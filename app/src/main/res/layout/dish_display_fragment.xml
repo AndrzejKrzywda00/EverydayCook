@@ -32,38 +32,71 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/playfair_display_black"
                 android:text="@string/default_dish_name"
-                android:textStyle="bold"
+                android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textAlignment="center">
+                android:textSize="30sp">
 
             </TextView>
 
             <!--Place for the subtitle-->
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:text="@string/default_dish_description"
+                android:textAlignment="center"
+                android:fontFamily="@font/playfair_display"
+                android:textColor="@color/cardview_dark_background">
 
             </TextView>
+
+            <!--There goes line too-->
 
             <!--Place for text "RECIPE"-->
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:text="@string/recipe_holder"
+                android:textColor="@color/dark_grey"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:layout_margin="15dp"
+                android:textStyle="italic">
 
             </TextView>
 
             <!--Place for actual recipe text-->
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:text="@string/default_recipe"
+                android:fontFamily="@font/playfair_display">
 
             </TextView>
 
             <!--Place for text "INGREDIENTS"-->
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_grey"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:text="@string/ingredients_holder"
+                android:textSize="20sp"
+                android:layout_margin="15dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/default_ingredients"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/playfair_display">
 
             </TextView>
 
