@@ -16,6 +16,7 @@
     <color name="background_blue">#61a8c7</color>   <!--Row background-->
     <color name="red">#ff0000</color>
     <color name="green">#07c700</color>
+    <color name="dark_green">#1b8207</color>
     <color name="dark_blue">#2a50e8</color>
     <color name="delicate_yellow">#fff652</color>
     <color name="dark_grey">#636664</color>

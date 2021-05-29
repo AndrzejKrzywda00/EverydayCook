@@ -108,16 +108,47 @@
             </TextView>
 
             <!--Place for cooking time-->
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
 
-            </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/calories_holder"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/playfair_display_black"
+                    android:textAlignment="center"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_calories"
+                    android:fontFamily="@font/playfair_display_black"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:layout_margin="15dp">
+
+                </TextView>
+
+            </LinearLayout>
 
             <!--Place for "DIET TYPE"-->
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:text="@string/default_diet_type"
+                android:textColor="@color/dark_grey"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:textSize="20sp"
+                android:layout_margin="15dp">
 
             </TextView>
 
@@ -125,21 +156,57 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_margin="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:text="@string/vegan_diet"
+                    android:textSize="20sp"
+                    android:textColor="@color/dark_green"
+                    android:fontFamily="@font/playfair_display_black"
+                    android:textAlignment="center">
 
                 </TextView>
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/vegLeaf"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="2dp"
+                    android:contentDescription="@string/default_description">
 
                 </ImageView>
 
             </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="@string/time_cooking_holder"
+                android:textSize="20sp"
+                android:textColor="@color/dark_grey"
+                android:textAlignment="center"
+                android:textStyle="italic">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/time_cooking_default"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:fontFamily="@font/playfair_display_black"
+                android:textSize="17sp">
+
+            </TextView>
+
+            <!--Only tags to finish-->
 
         </LinearLayout>
 
