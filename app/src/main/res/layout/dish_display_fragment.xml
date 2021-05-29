@@ -225,6 +225,17 @@
 
             </com.google.android.material.chip.ChipGroup>
 
+            <!--Finish-->
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/default_description"
+                android:background="@drawable/confirm1000"
+                android:layout_gravity="center"
+                android:id="@+id/confirm_choice_button">
+
+            </ImageButton>
+
         </LinearLayout>
 
     </ScrollView>

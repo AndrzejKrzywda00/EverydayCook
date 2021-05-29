@@ -57,7 +57,7 @@ public class TagCreationFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
         // defining which .xml file is the content of this fragment
-        View view =  inflater.inflate(R.layout.content_tag_creation, parent, false);
+        View view = inflater.inflate(R.layout.content_tag_creation, parent, false);
         chooseColorButton = view.findViewById(R.id.choose_color_button);
         addTagButton = view.findViewById(R.id.add_tag_button);
         textField = view.findViewById(R.id.tag_name_text);

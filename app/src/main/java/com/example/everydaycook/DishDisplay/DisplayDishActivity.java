@@ -15,6 +15,11 @@ public class DisplayDishActivity extends AppCompatActivity {
     This activity displays multiple or one
     Model view of dish
     with all necessary data
+    So what i need to do here is
+    to create fixed amount of dish display
+    fragments, put them in sliding gallery
+    order and make a system to handle incoming
+    calls
      */
 
     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
@@ -28,7 +33,7 @@ public class DisplayDishActivity extends AppCompatActivity {
 
     // This function calls two underlying
     private void manageDisplay() {
-
+        
     }
 
     // This function displays screen that says there is no dishes available
@@ -38,6 +43,10 @@ public class DisplayDishActivity extends AppCompatActivity {
         ft.add(R.id.fragment_no_data, fragment).commit();
     }
 
+    private void displayExemplaryFragment() {
+
+    }
+
     // This method displays all dishes by
     // running DishSelector engine
     // then creating suitable amount of fragments
@@ -45,5 +54,30 @@ public class DisplayDishActivity extends AppCompatActivity {
     private void displayAllDishes() {
 
     }
+
+    /***
+     * This method makes decision to
+     * choose certain dish and add to history
+     */
+    protected void chooseDish() {
+
+    }
+
+    /***
+     * This method handles swap right
+     * call to show next dish
+     */
+    protected void swapRight() {
+
+    }
+
+    /***
+     * This method handles swap left
+     * call to show previous dish
+     */
+    protected void swapLeft() {
+
+    }
+
 
 }
