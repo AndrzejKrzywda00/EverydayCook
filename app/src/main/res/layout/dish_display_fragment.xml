@@ -207,6 +207,23 @@
             </TextView>
 
             <!--Only tags to finish-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tags_default"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:layout_margin="15dp"
+                android:textColor="@color/dark_grey">
+
+            </TextView>
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+            </com.google.android.material.chip.ChipGroup>
 
         </LinearLayout>
 

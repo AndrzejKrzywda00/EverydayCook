@@ -143,9 +143,10 @@
     <string name="ingredients_holder">SKŁADNIKI</string>
     <string name="default_diet_type">RODZAJ DIETY</string>
     <string name="calories_holder">Kilokalorie</string>
-    <string name="time_cooking_holder">CZAS GOTOwANIA</string>
+    <string name="time_cooking_holder">CZAS GOTOWANIA</string>
     <string name="time_cooking_default">20 minut</string>
     <string name="default_recipe">Zagotuj wodę na makaron. Dodaj makaron. Podgrzej oliwę na gazie, dodaj przyprawę z paczki oraz sos pomidorowy. Następnie odsącz makaron i dodaj sos. Posyp serem. Gotowe!</string>
     <string name="default_ingredients">Makaron spaghetti, sos pomidorowy, ser typu parmezan, bazylia, przyprawy</string>
     <string name="default_calories">400</string>
+    <string name="tags_default">TAGI</string>
 </resources>
