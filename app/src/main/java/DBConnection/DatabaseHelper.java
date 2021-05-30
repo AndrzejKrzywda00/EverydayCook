@@ -225,7 +225,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(RECIPE, dish.getRecipe());
         cv.put(INGREDIENTS, dish.getIngredients());
         cv.put(KILO_CALORIES, dish.getKiloCalories());
-        cv.put(TYPE, dish.getType().toString());        // this can crash
+        cv.put(TYPE, dish.getType().toString());
         cv.put(COOKING_TIME, dish.getCookingTime());
         cv.put(TAGS_ADDED, dish.getTagsIds());
 
@@ -277,12 +277,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      */
     public int getNumberOfDishes() {
         SQLiteDatabase db = this.getReadableDatabase();
-        String selectQuery = "SELECT COUNT(id) FROM " + TABLE_DISHES;
+        String selectQuery = "SELECT COUNT(*) FROM " + TABLE_DISHES;
 
         Cursor c = db.rawQuery(selectQuery, null);
         int output = 0;
         if(c != null) {
-            output = c.getInt(c.getColumnIndex(ID));
+            output = c.getCount();
             c.close();
         }
         return output;

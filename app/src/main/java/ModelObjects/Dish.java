@@ -1,8 +1,7 @@
 package ModelObjects;
 
-import android.net.Uri;
-
 import java.util.ArrayList;
+
 import Enums.DietType;
 
 public class Dish {

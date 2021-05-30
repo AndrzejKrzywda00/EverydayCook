@@ -22,7 +22,7 @@ public class DishSelector {
 
     private final String algorithmPreference;
     private final String modePreference;
-    private final int NUMBER_OF_DISHES = 20;
+    private final int NUMBER_OF_DISHES = 10;
 
     // first i need to take data set in constructor
     // bc i can't call SharedPreferences because i don't have context
@@ -31,20 +31,14 @@ public class DishSelector {
         modePreference = preferences.getString("mode","default");
     }
 
-    public ArrayList<Dish> proposeDishes(Context c) throws TooSmallDataSetException {
-        if(algorithmPreference.equals("default")) {
-            return proposeDishesDefault(c);
-        }
-        if(algorithmPreference.equals("include_history")) {
-            return proposeDishesWithHistory(c);
-        }
-        return new ArrayList<>();
+    public ArrayList<Dish> proposeDishes(Context c) {
+        return proposeDishesDefault(c);
     }
 
     /*
     Makes random choice of dishes from database
      */
-    private ArrayList<Dish> proposeDishesDefault(Context c) throws TooSmallDataSetException {
+    private ArrayList<Dish> proposeDishesDefault(Context c) {
         ArrayList<Dish> dishes = new ArrayList<>();
         DatabaseHelper dbConnection = new DatabaseHelper(c);
         int dishesImported = dbConnection.getNumberOfDishes();
@@ -55,9 +49,6 @@ public class DishSelector {
                 Dish dish = dbConnection.getDishAtID(id);
                 dishes.add(dish);
             }
-        }
-        else {
-            throw new TooSmallDataSetException();
         }
         return dishes;
     }

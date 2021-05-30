@@ -149,4 +149,6 @@
     <string name="default_ingredients">Makaron spaghetti, sos pomidorowy, ser typu parmezan, bazylia, przyprawy</string>
     <string name="default_calories">400</string>
     <string name="tags_default">TAGI</string>
+
+    <string name="next_dish">Kolejne danie</string>
 </resources>

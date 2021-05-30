@@ -9,7 +9,6 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -46,9 +45,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/playfair_display"
                 android:text="@string/default_dish_description"
                 android:textAlignment="center"
+                android:fontFamily="@font/playfair_display"
                 android:textColor="@color/cardview_dark_background">
 
             </TextView>
@@ -59,11 +58,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
                 android:text="@string/recipe_holder"
-                android:textAlignment="center"
                 android:textColor="@color/dark_grey"
                 android:textSize="20sp"
+                android:textAlignment="center"
+                android:layout_margin="15dp"
                 android:textStyle="italic">
 
             </TextView>
@@ -72,10 +71,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/playfair_display"
-                android:text="@string/default_recipe"
                 android:textAlignment="center"
-                android:textColor="@color/black">
+                android:textColor="@color/black"
+                android:text="@string/default_recipe"
+                android:fontFamily="@font/playfair_display">
 
             </TextView>
 
@@ -83,22 +82,22 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:text="@string/ingredients_holder"
-                android:textAlignment="center"
                 android:textColor="@color/dark_grey"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:text="@string/ingredients_holder"
                 android:textSize="20sp"
-                android:textStyle="italic">
+                android:layout_margin="15dp">
 
             </TextView>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/playfair_display"
                 android:text="@string/default_ingredients"
                 android:textAlignment="center"
-                android:textColor="@color/black">
+                android:textColor="@color/black"
+                android:fontFamily="@font/playfair_display">
 
             </TextView>
 
@@ -113,16 +112,16 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/playfair_display_black"
                     android:text="@string/calories_holder"
-                    android:textAlignment="center"
                     android:textColor="@color/black"
+                    android:fontFamily="@font/playfair_display_black"
+                    android:textAlignment="center"
                     android:textSize="20sp">
 
                 </TextView>
@@ -130,12 +129,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:fontFamily="@font/playfair_display_black"
                     android:text="@string/default_calories"
-                    android:textAlignment="center"
+                    android:fontFamily="@font/playfair_display_black"
                     android:textColor="@color/black"
-                    android:textSize="20sp">
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:layout_margin="15dp">
 
                 </TextView>
 
@@ -145,12 +144,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
                 android:text="@string/default_diet_type"
-                android:textAlignment="center"
                 android:textColor="@color/dark_grey"
+                android:textAlignment="center"
+                android:textStyle="italic"
                 android:textSize="20sp"
-                android:textStyle="italic">
+                android:layout_margin="15dp">
 
             </TextView>
 
@@ -158,29 +157,29 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:gravity="center"
                 android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_margin="5dp"
                 tools:ignore="UseCompoundDrawables">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/playfair_display_black"
                     android:text="@string/vegan_diet"
-                    android:textAlignment="center"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_green"
-                    android:textSize="20sp">
+                    android:fontFamily="@font/playfair_display_black"
+                    android:textAlignment="center">
 
                 </TextView>
 
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginStart="2dp"
+                    android:src="@drawable/veg_leaf"
                     android:layout_marginTop="2dp"
-                    android:contentDescription="@string/default_description"
-                    android:src="@drawable/veg_leaf">
+                    android:layout_marginStart="2dp"
+                    android:contentDescription="@string/default_description">
 
                 </ImageView>
 
@@ -191,9 +190,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
                 android:text="@string/time_cooking_holder"
-                android:textAlignment="center"
-                android:textColor="@color/dark_grey"
                 android:textSize="20sp"
+                android:textColor="@color/dark_grey"
+                android:textAlignment="center"
                 android:textStyle="italic">
 
             </TextView>
@@ -201,10 +200,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/playfair_display_black"
                 android:text="@string/time_cooking_default"
-                android:textAlignment="center"
                 android:textColor="@color/black"
+                android:textAlignment="center"
+                android:fontFamily="@font/playfair_display_black"
                 android:textSize="17sp">
 
             </TextView>
@@ -213,34 +212,40 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
                 android:text="@string/tags_default"
-                android:textAlignment="center"
-                android:textColor="@color/dark_grey"
                 android:textSize="20sp"
-                android:textStyle="italic">
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:layout_margin="15dp"
+                android:textColor="@color/dark_grey">
 
             </TextView>
 
+            <com.google.android.material.chip.ChipGroup
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+            </com.google.android.material.chip.ChipGroup>
+
             <!--Finish-->
             <ImageButton
-                android:id="@+id/confirm_choice_button"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_gravity="center"
+                android:contentDescription="@string/default_description"
                 android:background="@drawable/confirm1000"
-                android:contentDescription="@string/default_description">
+                android:layout_gravity="center"
+                android:id="@+id/confirm_choice_button">
 
             </ImageButton>
 
             <Button
-                android:id="@+id/next_dish_button"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
+                android:text="@string/next_dish"
+                android:backgroundTint="@color/black"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
-                android:backgroundTint="@color/black"
-                android:text="@string/next_dish">
+                android:id="@+id/next_dish_button">
 
             </Button>
 

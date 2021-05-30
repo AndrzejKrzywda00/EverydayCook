@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CancellationSignal;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Size;
 import android.view.LayoutInflater;
@@ -17,12 +18,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import androidx.activity.result.ActivityResult;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import com.example.everydaycook.R;
 
+import java.io.File;
 import java.io.IOException;
 
 public class DishBasicDataFragment extends Fragment {
@@ -40,17 +44,6 @@ public class DishBasicDataFragment extends Fragment {
     private ImageView thumbnail;
     private EditText name;
     private EditText description;
-
-    /*
-    Content resolver class that does my job to make image look good
-     */
-    ContentResolver contentResolver = new ContentResolver(getContext()) {
-        @NonNull
-        @Override
-        public Bitmap loadThumbnail(@NonNull Uri uri, @NonNull Size size, @Nullable CancellationSignal signal) throws IOException {
-            return super.loadThumbnail(uri, size, signal);
-        }
-    };
 
     public DishBasicDataFragment() {
         super(R.layout.fragment_dish_basic_data);
@@ -81,34 +74,19 @@ public class DishBasicDataFragment extends Fragment {
         takePhotoButton.setOnClickListener(this::takePhoto);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.Q)
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        switch(requestCode) {
-            case 0:
-            case 1:
-                if(resultCode == Activity.RESULT_OK) {
-                    Uri selectedImage = data.getData();
-                    //thumbnail.setImageURI(selectedImage);
-                    imageUri = selectedImage;
-
-                    Size size = new Size(thumbnail.getWidth(), thumbnail.getHeight());
-                    try {
-                        Bitmap bitmap = contentResolver.loadThumbnail(selectedImage, size, null);
-                        thumbnail.setImageBitmap(bitmap);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-                break;
-        }
-    }
+//    @Override
+//    public void onActivityResult(ActivityResult result) {
+//        if(result.getResultCode() == Activity.RESULT_OK) {
+//            Uri selectedImage = result.getData().getData();
+//            imageUri = selectedImage;
+//            thumbnail.setImageURI(selectedImage);
+//        }
+//    }
 
     public void takePhoto(View view) {
         Intent pickPhoto = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         int TAKE_PICTURE = 0;
-        startActivityForResult(pickPhoto, TAKE_PICTURE);
+        //startActivityForResult(pickPhoto, TAKE_PICTURE);
     }
 
     protected String getDishName() {

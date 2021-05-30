@@ -9,6 +9,12 @@ import android.preference.PreferenceManager;
 
 import com.example.everydaycook.R;
 
+import java.util.ArrayList;
+
+import Exceptions.TooSmallDataSetException;
+import ModelObjects.Dish;
+import algorithm.DishSelector;
+
 public class DisplayDishActivity extends AppCompatActivity {
 
     /*
@@ -22,18 +28,24 @@ public class DisplayDishActivity extends AppCompatActivity {
     calls
      */
 
-    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+    private DishSelector engine;
+    private int dishPosition;
+    private ArrayList<Dish> dishes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_dish);
-        displayNoDishes();
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        engine = new DishSelector(preferences);
+        manageDisplay();
     }
 
     // This function calls two underlying
     private void manageDisplay() {
-        
+        dishPosition = 0;
+        dishes = engine.proposeDishes(getApplicationContext());
+        displayAllDishes();
     }
 
     // This function displays screen that says there is no dishes available
@@ -52,7 +64,9 @@ public class DisplayDishActivity extends AppCompatActivity {
     // then creating suitable amount of fragments
     // and then creating a gallery out of them
     private void displayAllDishes() {
-
+        DishDisplayFragment fragment = DishDisplayFragment.newInstance();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.add(R.id.fragment_no_data, fragment).commit();
     }
 
     /***

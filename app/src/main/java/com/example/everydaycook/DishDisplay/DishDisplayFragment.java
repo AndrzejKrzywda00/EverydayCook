@@ -14,6 +14,10 @@ import com.example.everydaycook.R;
 
 public class DishDisplayFragment extends Fragment {
 
+    /*
+    This one is big fragment that has all necessary data to display screen
+     */
+
     // abstract UI parent element
     private DisplayDishActivity myActivity;
 
@@ -24,6 +28,10 @@ public class DishDisplayFragment extends Fragment {
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         myActivity = (DisplayDishActivity) context;
+    }
+
+    public static DishDisplayFragment newInstance() {
+        return new DishDisplayFragment();
     }
 
     public DishDisplayFragment() {
@@ -44,9 +52,8 @@ public class DishDisplayFragment extends Fragment {
 
     private void addListeners() {
         chooseButton.setOnClickListener(v -> {
-
+            myActivity.swapRight();
         });
     }
-
 
 }
