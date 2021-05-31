@@ -15,9 +15,14 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.everydaycook.R;
+import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 
+import java.util.ArrayList;
+
+import Enums.DietType;
 import ModelObjects.Dish;
+import ModelObjects.Tag;
 
 public class DishDisplayFragment extends Fragment {
 
@@ -44,6 +49,8 @@ public class DishDisplayFragment extends Fragment {
     ImageButton chooseButton;
     Button nextDishButton;
     ChipGroup dishChips;
+
+    private final String NO_INFORMATION = "brak informacji";
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -72,14 +79,52 @@ public class DishDisplayFragment extends Fragment {
     }
 
     private void addListeners() {
-        chooseButton.setOnClickListener(v -> myActivity.swapRight());
+        chooseButton.setOnClickListener(v -> myActivity.swapRight());   // accept
+        nextDishButton.setOnClickListener(v -> myActivity.swapLeft());  // reject
     }
 
     /***
      * Changes all exemplary data to dish object data
-     * @param dish is a dish passed from db
      */
-    protected void displayDish(Dish dish) {
+    protected void displayDish() {
+        dishImage.setImageURI(dish.getImage());
+        dishName.setText(dish.getName());
+        dishDescription.setText(dish.getDescription());
+
+        if(dish.getRecipe() != null) {
+            dishRecipe.setText(dish.getRecipe());
+        }
+        else {
+            dishRecipe.setText(NO_INFORMATION);
+        }
+
+        if(dish.getIngredients() != null) {
+            dishIngredients.setText(dish.getIngredients());
+        }
+        else {
+            dishIngredients.setText(NO_INFORMATION);
+        }
+        dishCalories.setText(dish.getKiloCalories());
+        if(dish.getType() != null) {
+            DietType diet = dish.getType();
+            if(diet == DietType.Standard) {
+                dishDietType.setText(diet.toString());
+                dishDietType.setTextColor(getResources().getColor(R.color.black));
+                vegImg.setVisibility(View.INVISIBLE);
+            }
+            else {
+                dishDietType.setText(diet.toString());
+            }
+        }
+        if(dish.getCookingTime() != null) {
+            dishCookingTime.setText(dish.getCookingTime());
+        }
+        ArrayList<Tag> tags = dish.getTags();
+        for(Tag tag : tags) {
+            Chip chip = new Chip(requireContext());
+            chip.setText(tag.getContent());
+            dishChips.addView(chip);
+        }
 
     }
 

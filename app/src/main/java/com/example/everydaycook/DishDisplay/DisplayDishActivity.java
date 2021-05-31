@@ -1,17 +1,17 @@
 package com.example.everydaycook.DishDisplay;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.everydaycook.R;
 
 import java.util.ArrayList;
 
-import Exceptions.TooSmallDataSetException;
 import ModelObjects.Dish;
 import algorithm.DishSelector;
 
@@ -31,6 +31,7 @@ public class DisplayDishActivity extends AppCompatActivity {
     private DishSelector engine;
     private int dishPosition;
     private ArrayList<Dish> dishes;
+    private ArrayList<Fragment> fragments;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,11 @@ public class DisplayDishActivity extends AppCompatActivity {
     private void manageDisplay() {
         dishPosition = 0;
         dishes = engine.proposeDishes(getApplicationContext());
+        for(Dish dish: dishes) {
+            DishDisplayFragment fragment = new DishDisplayFragment();
+            fragment.setDish(dish);
+            fragments.add(fragment);
+        }
         displayAllDishes();
     }
 
@@ -52,11 +58,7 @@ public class DisplayDishActivity extends AppCompatActivity {
     private void displayNoDishes() {
         NoDishesFragment fragment = NoDishesFragment.newInstance();
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.add(R.id.fragment_no_data, fragment).commit();
-    }
-
-    private void displayExemplaryFragment() {
-
+        ft.add(R.id.fragment_data, fragment).commit();
     }
 
     // This method displays all dishes by
@@ -66,7 +68,7 @@ public class DisplayDishActivity extends AppCompatActivity {
     private void displayAllDishes() {
         DishDisplayFragment fragment = DishDisplayFragment.newInstance();
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.add(R.id.fragment_no_data, fragment).commit();
+        ft.add(R.id.fragment_data, fragment).commit();
     }
 
     /***
@@ -90,7 +92,7 @@ public class DisplayDishActivity extends AppCompatActivity {
      * call to show previous dish
      */
     protected void swapLeft() {
-
+        // load next fragment
     }
 
 

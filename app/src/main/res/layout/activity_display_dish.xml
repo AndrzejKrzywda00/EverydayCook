@@ -8,7 +8,7 @@
     <androidx.fragment.app.FragmentContainerView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:id="@+id/fragment_no_data"
+        android:id="@+id/fragment_data"
         tools:ignore="MissingConstraints">
 
     </androidx.fragment.app.FragmentContainerView>
