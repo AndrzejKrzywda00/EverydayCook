@@ -1,13 +1,8 @@
 package com.example.everydaycook.DishCreation;
 
 import android.os.Bundle;
-import android.widget.ScrollView;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
-
 import com.example.everydaycook.R;
-
 import DBConnection.DatabaseHelper;
 import ModelObjects.Dish;
 
@@ -43,7 +38,6 @@ public class DishCreatorActivity extends AppCompatActivity {
 
     protected void eraseData() {
         // call all activities to erase their data
-        // TODO -- make this work
     }
 
     protected void injectDishData() {
@@ -56,6 +50,7 @@ public class DishCreatorActivity extends AppCompatActivity {
             dish.setKiloCalories(Integer.parseInt(supplementaryData.getCalories()));
             dish.setCookingTime(supplementaryData.getCookingTime());
             dish.setType(supplementaryData.getDietType());
+            dish.setImage(basicData.getImageUri());
             dish.setTags(tagsData.getActiveTags());
 
             // db connection

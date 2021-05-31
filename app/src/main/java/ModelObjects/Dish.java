@@ -1,5 +1,7 @@
 package ModelObjects;
 
+import android.net.Uri;
+
 import java.util.ArrayList;
 
 import Enums.DietType;
@@ -13,6 +15,7 @@ public class Dish {
     private int kiloCalories;       // is amount of kcal in the dish
     private DietType type;          // is the type of diet for ex. "Vegan"
     private String cookingTime;     // is estimated cooking time - in minutes
+    private Uri image;              // is the uri access for image attached
     private ArrayList<Tag> tags;    // is the list of tags
 
     // parses data to SQLite query format
@@ -132,6 +135,18 @@ public class Dish {
         }
 
         return sb.toString();
+    }
+
+    public Uri getImage() {
+        return this.image;
+    }
+
+    public void setImage(Uri uri) {
+        this.image = uri;
+    }
+
+    public void setImage(String uri) {
+        this.image = Uri.parse(uri);
     }
 
 }

@@ -142,7 +142,7 @@
     <string name="recipe_holder">PRZEPIS</string>
     <string name="ingredients_holder">SKŁADNIKI</string>
     <string name="default_diet_type">RODZAJ DIETY</string>
-    <string name="calories_holder">Kilokalorie</string>
+    <string name="calories_holder">Kilokalorie:</string>
     <string name="time_cooking_holder">CZAS GOTOWANIA</string>
     <string name="time_cooking_default">20 minut</string>
     <string name="default_recipe">Zagotuj wodę na makaron. Dodaj makaron. Podgrzej oliwę na gazie, dodaj przyprawę z paczki oraz sos pomidorowy. Następnie odsącz makaron i dodaj sos. Posyp serem. Gotowe!</string>

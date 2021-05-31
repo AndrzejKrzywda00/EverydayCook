@@ -17,7 +17,7 @@ import ModelObjects.Tag;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     // version
-    private static final int DATABASE_VERSION = 4;
+    private static final int DATABASE_VERSION = 5;
 
     // database name
     private static final String DATABASE_NAME = "EC_DATA";
@@ -36,6 +36,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String KILO_CALORIES = "kilo_calories";
     private static final String TYPE = "type";
     private static final String COOKING_TIME = "cooking_time";
+    private static final String URI = "uri";
     private static final String TAGS_ADDED = "tags_added";
 
     // columns names for HISTORY
@@ -58,6 +59,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + KILO_CALORIES + " INTEGER,"
             + TYPE + " TEXT,"
             + COOKING_TIME + " TEXT,"
+            + URI + " TEXT,"
             + TAGS_ADDED + " TEXT" + ")";
 
     // creating table HISTORY
@@ -227,6 +229,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(KILO_CALORIES, dish.getKiloCalories());
         cv.put(TYPE, dish.getType().toString());
         cv.put(COOKING_TIME, dish.getCookingTime());
+        cv.put(URI, dish.getImage().toString());
         cv.put(TAGS_ADDED, dish.getTagsIds());
 
         db.insert(TABLE_DISHES, null, cv);
@@ -262,6 +265,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             dish.setRecipe(c.getString(c.getColumnIndex(RECIPE)));
             dish.setKiloCalories(c.getInt(c.getColumnIndex(KILO_CALORIES)));
             dish.setType(c.getString(c.getColumnIndex(TYPE)));
+            dish.setImage(c.getString(c.getColumnIndex(URI)));
             dish.setCookingTime(c.getString(c.getColumnIndex(COOKING_TIME)));
 
             // then parsing tags into form that can be injected into dish object
